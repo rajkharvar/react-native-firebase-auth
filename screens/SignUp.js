@@ -55,7 +55,7 @@ class SignUp extends Component {
           >
             <AntDesign name='adduser' size={150} style={{ color: '#111' }} />
           </View>
-          <KeyboardAvoidingView style={{ flex: 3 }}>
+          <KeyboardAvoidingView behavior='padding' style={{ flex: 3 }}>
             <Form>
               <Item floatingLabel>
                 <Label>First Name</Label>
@@ -113,6 +113,24 @@ class SignUp extends Component {
                 </Text>
               </TouchableOpacity>
             </Form>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('SignIn')}
+              style={{
+                justifyContent: 'center',
+                marginTop: 20,
+                alignItems: 'center'
+              }}
+            >
+              <View style={{ borderBottomWidth: 1, borderBottomColor: '#333' }}>
+                <Text
+                  style={{
+                    fontSize: 18
+                  }}
+                >
+                  Already a Member? Login In
+                </Text>
+              </View>
+            </TouchableOpacity>
           </KeyboardAvoidingView>
         </View>
       </TouchableWithoutFeedback>

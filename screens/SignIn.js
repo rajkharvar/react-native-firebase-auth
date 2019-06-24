@@ -81,8 +81,25 @@ class SignIn extends Component {
                 <AntDesign name='login' size={50} style={{ color: '#111' }} />
               </TouchableOpacity>
             </Form>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('SignUp')}
+              style={{
+                justifyContent: 'center',
+                marginTop: 20,
+                alignItems: 'center'
+              }}
+            >
+              <View style={{ borderBottomWidth: 1, borderBottomColor: '#333' }}>
+                <Text
+                  style={{
+                    fontSize: 18
+                  }}
+                >
+                  Not a Member? Sign Up
+                </Text>
+              </View>
+            </TouchableOpacity>
           </KeyboardAvoidingView>
-          {/* </View> */}
         </View>
       </TouchableWithoutFeedback>
     );
